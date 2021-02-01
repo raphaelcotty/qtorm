@@ -29,6 +29,5 @@ jobs:
     - name: Configure Qbs
       run: |
         qbs-setup-toolchains --detect
-        echo $Qt5_DIR/${{qtversion}}
-        qbs-setup-qt $Qt5_DIR/${{qtversion}} qt5
+        qbs-setup-qt --detect
       shell: bash
