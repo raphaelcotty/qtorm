@@ -22,6 +22,9 @@ jobs:
       run: |
         wget --no-check-certificate --content-disposition https://download.qt.io/official_releases/qbs/1.18.0/qbs-linux-x86_64-1.18.0.tar.gz
         tar xzvf qbs-linux-x86_64-1.18.0.tar.gz
-        echo "$HOME/usr/local/bin" >> ${GITHUB_PATH}
+        QBS_BIN_DIR="$HOME/usr/local/bin"
+        echo ${QBS_BIN_DIR} >> ${GITHUB_PATH}
+        echo ${QBS_BIN_DIR}
+        ls ${QBS_BIN_DIR}
         qbs --version
       shell: bash
