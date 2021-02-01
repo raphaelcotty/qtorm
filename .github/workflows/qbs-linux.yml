@@ -28,5 +28,5 @@ jobs:
         ls
         pwd
         ls ${QBS_BIN_DIR}
-        qbs --version
+        ${QBS_BIN_DIR}/qbs --version
       shell: bash
