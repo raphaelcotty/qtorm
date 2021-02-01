@@ -19,4 +19,9 @@ jobs:
         extra: '--archives qt qtbase qtdeclarative qtquickcontrols2 icu'
    
     - name: Install Qbs
-      run: wget --no-check-certificate --content-disposition https://download.qt.io/official_releases/qbs/1.18.0/qbs-linux-x86_64-1.18.0.tar.gz
+      run: |
+        wget --no-check-certificate --content-disposition https://download.qt.io/official_releases/qbs/1.18.0/qbs-linux-x86_64-1.18.0.tar.gz
+        cd /
+        tar xzvf qbs-linux-x86_64-1.18.0.tar.gz
+        ls /usr/local/bin/
+      shell: bash
