@@ -30,4 +30,5 @@ jobs:
       run: |
         qbs-setup-toolchains --detect
         qbs-setup-qt --detect
+        qbs-config profiles.qt-5-15-1.baseProfile x86_64-linux-gnu-gcc-9
       shell: bash
