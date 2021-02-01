@@ -26,6 +26,7 @@ jobs:
         echo ${QBS_BIN_DIR} >> ${GITHUB_PATH}
         echo ${QBS_BIN_DIR}
         ls
+        pwd
         ls ${QBS_BIN_DIR}
         qbs --version
       shell: bash
