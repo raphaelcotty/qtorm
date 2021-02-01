@@ -34,6 +34,9 @@ jobs:
       shell: bash
 
     - name: Build
-      run: |
-          qbs build profile:qt-5-15-1
+      run: qbs build profile:qt-5-15-1
+      shell: bash
+
+    - name: Test
+      run: qbs build profile:qt-5-15-1 -p autotest-runner
       shell: bash
