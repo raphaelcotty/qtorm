@@ -23,11 +23,10 @@ jobs:
         wget --no-check-certificate --content-disposition https://download.qt.io/official_releases/qbs/1.18.0/qbs-linux-x86_64-1.18.0.tar.gz
         tar xzvf qbs-linux-x86_64-1.18.0.tar.gz
         QBS_BIN_DIR="/home/runner/work/qtorm/qtorm/usr/local/bin"
-        echo ${QBS_BIN_DIR} >> $GITHUB_PATH
+        echo ${QBS_BIN_DIR} >> ${GITHUB_PATH}
         echo ${QBS_BIN_DIR}
         ls
         pwd
         ls ${QBS_BIN_DIR}
-        ${QBS_BIN_DIR}/qbs-setup-toolchains
-        echo $GITHUB_PATH
+        qbs-setup-toolchains
       shell: bash
