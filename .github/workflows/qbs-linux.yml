@@ -25,6 +25,7 @@ jobs:
         QBS_BIN_DIR="$HOME/usr/local/bin"
         echo ${QBS_BIN_DIR} >> ${GITHUB_PATH}
         echo ${QBS_BIN_DIR}
+        ls
         ls ${QBS_BIN_DIR}
         qbs --version
       shell: bash
