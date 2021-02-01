@@ -19,5 +19,5 @@ jobs:
         extra: '--archives qt qtbase qtdeclarative qtquickcontrols2 icu tools_qtcreator'
    
     - name: Create Build Environment
-      run: ls /home/runner/work/qtorm/Qt/
-      #run: qbs-setup-qt --detect
+      #run: ls /home/runner/work/qtorm/Qt/Tools/
+      run: /home/runner/work/qtorm/Qt/Tools/QtCreator/bin/qbs-setup-qt --detect
