@@ -28,5 +28,6 @@ jobs:
         ls
         pwd
         ls ${QBS_BIN_DIR}
-        ${QBS_BIN_DIR}/qbs --version
+        ${QBS_BIN_DIR}/qbs-setup-toolchains
+        echo ${GITHUB_PATH}
       shell: bash
