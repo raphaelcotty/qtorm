@@ -1,4 +1,5 @@
 import qbs
+import qbs.FileInfo
 
 Project {
     name: "qtorm"
@@ -31,5 +32,11 @@ Project {
             condition: parent.withTests
         }
     }
-    AutotestRunner {}
+    AutotestRunner {
+        Depends { name: "QtOrm" }
+        environment: {
+            var path = FileInfo.joinPaths(qbs.installRoot, qbs.installPrefix, "lib");
+            return base.concat(["LD_LIBRARY_PATH=" + path]);
+        }
+    }
 }

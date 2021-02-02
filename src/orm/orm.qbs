@@ -6,6 +6,7 @@ import qbs.TextFile
 Project {
     DynamicLibrary {
         name: "QtOrm"
+                  install: true
         Group {
             name: "public"
             files: [
