@@ -31,4 +31,5 @@ Project {
             condition: parent.withTests
         }
     }
+    AutotestRunner {}
 }
