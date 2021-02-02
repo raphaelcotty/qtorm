@@ -28,15 +28,15 @@ jobs:
 
     - name: Configure Qbs
       run: |
-        qbs-setup-toolchains --detect
-        qbs-setup-qt --detect
-        qbs-config profiles.qt-5-15-1.baseProfile x86_64-linux-gnu-gcc-9
+        qbs-setup-toolchains $(command -v gcc) gcc
+        qbs-setup-qt $(command -v qmake) qt5
+        qbs-config profiles.qt5.baseProfile gcc
       shell: bash
 
     - name: Build
-      run: qbs build profile:qt-5-15-1
+      run: qbs build profile:qt5
       shell: bash
 
     - name: Test
-      run: qbs build profile:qt-5-15-1 -p autotest-runner
+      run: qbs build profile:qt5 -p autotest-runner
       shell: bash
